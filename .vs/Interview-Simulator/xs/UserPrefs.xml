@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{94B81C57-38B9-9D3E-D709-20E3DE0C408C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/Avatar/Scripts/OvrAvatarSDKManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/VoiceManagerScript.cs" Line="33" Column="50" />
+      <File FileName="Assets/Oculus/Avatar/Scripts/OvrAvatarSDKManager.cs" Line="82" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
