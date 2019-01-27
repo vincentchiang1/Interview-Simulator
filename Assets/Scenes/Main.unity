@@ -351,6 +351,7 @@ MonoBehaviour:
   - Play
   - Start
   - Stop
+  - Hello
   timer: {fileID: 1706232423}
 --- !u!82 &250005316
 AudioSource:
@@ -617,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717488565}
   m_Layer: 0
-  m_Name: Recording
+  m_Name: RecordingStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
