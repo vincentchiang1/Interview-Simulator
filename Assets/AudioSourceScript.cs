@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using SpeechLib;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +11,10 @@ public class AudioSourceScript : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private string[] m_Keywords;
+    private SpVoice voice;
 
     public TextMeshProUGUI timer;
-    private string recordingStatus = "Stopped: ";
+    private string recordingStatus = "Stopped ";
     private Boolean stopped = true;
     private float time;
     private KeywordRecognizer m_Recognizer;
@@ -23,6 +25,7 @@ public class AudioSourceScript : MonoBehaviour
         m_Recognizer = new KeywordRecognizer(m_Keywords);
         m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
         m_Recognizer.Start();
+        voice = new SpVoice();
     }
 
     private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -60,6 +63,12 @@ public class AudioSourceScript : MonoBehaviour
             recordingStatus = "Stopped: " + $"{time/60:00} : {time%60:00}";
             Debug.Log("Microphone Ended");
             if (Microphone.IsRecording("")) Microphone.End("");
+        }
+
+        if (args.text == m_Keywords[5])
+        {
+            voice.Volume = 60;
+            voice.Speak("Hello Jerry, would you like to start your interview?");
         }
 
     }
