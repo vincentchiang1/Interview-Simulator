@@ -16,6 +16,10 @@ public class Interview : MonoBehaviour
     private KeywordRecognizer m_Recognizer;
     private SpVoice voice;
 
+
+    [SerializeField]
+    public CanvasRenderer im1,im2,im3;
+
     private string stage = "behavioral";
 
 
@@ -119,11 +123,12 @@ public class Interview : MonoBehaviour
         }
     }
 
-    private void InstantiateMultipleChoicePhotos(SpriteRenderer im1, SpriteRenderer im2, SpriteRenderer im3)
+    private void InstantiateMultipleChoicePhotos(SpriteRenderer image1, SpriteRenderer image2, SpriteRenderer image3)
     {
-        Instantiate(im1, new Vector3(154, 195, 394), Quaternion.identity);
-        Instantiate(im2, new Vector3(154, 195, 394), Quaternion.identity);
-        Instantiate(im3, new Vector3(154, 195, 394), Quaternion.identity);
+       Instantiate(im1, new Vector3((float)1.8, (float)0.7, (float)-0.7), Quaternion.identity);
+       im1.
+       Instantiate(im2, new Vector3((float)0.7, (float)0.7, (float)-0.7), Quaternion.identity);
+        Instantiate(im3, new Vector3((float)-0.3, (float)0.7, (float)-0.7), Quaternion.identity);
     }
 
     //private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
